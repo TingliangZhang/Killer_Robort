@@ -14,7 +14,7 @@
 
 - 张庭梁   zhangtl16@mails.tsinghua.edu.cn
 - 田润卉
-- 陈怡
+- 陈怡    chenyi15@mails.tsinghua.edu.cn
 - 张旭婕
 - 康熔芹
 - 于梦
