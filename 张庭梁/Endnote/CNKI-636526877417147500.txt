@@ -1,0 +1,12 @@
+%0 Journal Article
+%A Roff
+%T To ban or regulate autonomous weapons
+%J Bulletin of the Atomic Scientists
+%D 2016
+%N 2
+%V 72
+%K Artificial intelligence;autonomous weapons;civilians;civilian safety;combatants;dual-use technologies;European Convention on Human Rights;Gorgon Stare;international humanitarian law;international human rights law
+%@ 0096-3402
+%W CNKI
+
+

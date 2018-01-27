@@ -1,0 +1,17 @@
+%0 Journal Article
+%A Patrick van Esch
+%A Gavin Northey
+%A Magdalene Striluk
+%A Helen Wilson
+%+ Department of Economics and Business, Moravian College, Bethlehem, Pennsylvania, USA;;Department of Marketing, University of Auckland, Auckland, New Zealand;;School of Law, Charles Darwin University, Darwin, Northern Territory, Australia
+%T Autonomous weapon systems: Is a space warfare manual required?
+%J Computer Law & Security Review: The International Journal of Technology Law and Practice
+%D 2017
+%N 3
+%V 33
+%K Autonomous weapon systems;Space law;Space warfare manual
+%X Abstract(#br)The legalities for the use of Autonomous Weapon Systems (AWS) in space warfare are examined. Currently, there are manuals for air and missile warfare, naval warfare and cyber warfare, a clear gap in the literature is that there is no manual for space warfare. We find that the current jurisprudence of space is somewhat considered analogous to the high seas and in the absence of a Space Warfare Manual, legal jurisdiction may consider that certain treaties are only in effect when in the territory of that State. In turn, the effectiveness of those treaties may mitigate against any obligations related to the military operations of that same State using AWS in space. Whilst it is yet to be tested in the courts, there are significant gaps identified in Lex lata and supporting Declarations, Principles and Treaties in terms of space warfare. Such gaps could act as the foundations for both law reform and the requirement for the creation of a Space Warfare Manual.
+%@ 0267-3649
+%W CNKI
+
+
