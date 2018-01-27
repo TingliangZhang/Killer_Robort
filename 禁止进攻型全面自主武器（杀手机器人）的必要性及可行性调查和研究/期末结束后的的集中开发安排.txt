@@ -1,0 +1,13 @@
+期末结束后的的集中开发安排
+1. Github协同基本操作
+2. Teamviewer团队会议使用
+3. Microsoft远程桌面使用
+4. VPN使用
+5. 网络摄像头使用
+6. Wikipedia基本操作
+7. Nas资源介绍并分配账号
+8. Latex介绍（包括TEX库调用，如CTEX）论文排版需要
+9. Endnotes文献管理工具使用
+
+
+
