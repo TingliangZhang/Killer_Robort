@@ -18,3 +18,6 @@
 - 张旭婕
 - 康熔芹
 - 于梦
+
+![](https://github.com/TingliangZhang/Killer_Robort/blob/master/thu-whole-logo.png)
+![](https://github.com/TingliangZhang/Killer_Robort/blob/master/skyworks_logo.jpg)
