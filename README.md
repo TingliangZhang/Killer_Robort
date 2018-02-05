@@ -16,7 +16,7 @@
 - 田润卉
 - 陈怡    chenyi15@mails.tsinghua.edu.cn
 - 张旭婕
-- 康熔芹
+- 康熔芹   krq16@mails.tsinghua.edu.cn
 - 于梦
 
 ![](https://github.com/TingliangZhang/Killer_Robort/blob/master/thu-whole-logo.png)
