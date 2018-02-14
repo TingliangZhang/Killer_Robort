@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{color}
+\usepackage{alltt}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\input {highlight.sty}
+
+\title{Source file}
+\begin{document}
+\pagecolor{bgcolor}
+\noindent
+\ttfamily
+\shorthandoff{"}
+\hlstd{}\hlslc{\%Script\ file\ ball.m}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%Purpose:}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%}\hlstd{\ \ }\hlslc{This\ program\ calculates\ the\ distance\ traveled\ by\ a\ ball}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%throw\ at\ a\ speciified\ angle\ \dq{}theta\dq{}\ and\ a\ specified\ }\Righttorque\hspace*{\fill}\\
+\hlslc{velocity}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%\dq{}vo\dq{}\ from\ a\ point,ignoring\ air\ friction.It\ calculates\ the\ }\Righttorque\hspace*{\fill}\\
+\hlslc{angle}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%yeileding\ maximun\ range,and\ also\ plots\ selected\ }\Righttorque\hspace*{\fill}\\
+\hlslc{trajectories.}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%Define\ variable:}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%conv}\hlstd{\ \ \ \ \ \ \ }\hlslc{degrees\ to\ radians\ conv\ factor}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%grav}\hlstd{\ \ \ \ \ \ \ }\hlslc{The\ gravity\ accel}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%ii,jj}\hlstd{\ \ \ \ \ \ }\hlslc{Loop\ index}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%index}\hlstd{\ \ \ \ \ \ }\hlslc{The\ maximum\ range\ in\ array}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%maxangle}\hlstd{\ \ \ }\hlslc{The\ angle\ that\ gives\ the\ maximum\ range}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%maxrange}\hlstd{\ \ \ }\hlslc{Maximum\ range}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%range}\hlstd{\ \ \ \ \ \ }\hlslc{ranghe\ for\ a\ specified\ angle}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%time}\hlstd{\ \ \ \ \ \ \ }\hlslc{Time}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%theta}\hlstd{\ \ \ \ \ \ }\hlslc{Inital\ angle}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%fly\textunderscore time}\hlstd{\ \ \ }\hlslc{the\ totle\ trajectory\ time}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%vo}\hlstd{\ \ \ \ \ \ \ \ \ }\hlslc{The\ initial\ velocity}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%vxo}\hlstd{\ \ \ \ \ \ \ \ }\hlslc{x{-}component\ of\ the\ initial\ velocity}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%vyo}\hlstd{\ \ \ \ \ \ \ \ }\hlslc{y{-}component\ of\ the\ initial\ velocity}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%x}\hlstd{\ \ \ \ \ \ \ \ \ \ }\hlslc{x{-}position\ of\ ball}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%y}\hlstd{\ \ \ \ \ \ \ \ \ \ }\hlslc{y{-}position\ of\ ball}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%定义常数数值}\hspace*{\fill}\\
+\hlstd{}\hlkwb{conv}\hlstd{}\hlopt{=}\hlstd{pi}\hlopt{/}\hlstd{}\hlnum{180}\hlstd{}\hlopt{;}\hspace*{\fill}\\
+\hlstd{grav}\hlopt{={-}}\hlstd{}\hlnum{9.82}\hlstd{}\hlopt{;}\hspace*{\fill}\\
+\hlstd{vo}\hlopt{=}\hlstd{}\hlkwa{input}\hlstd{}\hlopt{(}\hlstd{}\hlstr{'Enter\ the\ initial\ velocity:'}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{\ }\hspace*{\fill}\\
+\hlstd{range}\hlopt{=}\hlstd{zeros}\hlopt{(}\hlstd{}\hlnum{1}\hlstd{}\hlopt{,}\hlstd{}\hlnum{91}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{\ }\hlslc{\%计算最大的水平距离}\hspace*{\fill}\\
+\hlstd{}\hlkwa{for\ }\hlstd{ii}\hlopt{=}\hlstd{}\hlnum{1}\hlstd{}\hlopt{:}\hlstd{}\hlnum{91}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{theta\ }\hlopt{=}\hlstd{ii}\hlopt{{-}}\hlstd{}\hlnum{1}\hlstd{}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{vxo}\hlopt{=}\hlstd{vo}\hlopt{{*}}\hlstd{}\hlkwb{cos}\hlstd{}\hlopt{(}\hlstd{theta}\hlopt{{*}}\hlstd{}\hlkwb{conv}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{vyo}\hlopt{=}\hlstd{vo}\hlopt{{*}}\hlstd{}\hlkwb{sin}\hlstd{}\hlopt{(}\hlstd{theta}\hlopt{{*}}\hlstd{}\hlkwb{conv}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{max\textunderscore time}\hlopt{={-}}\hlstd{}\hlnum{2}\hlstd{}\hlopt{{*}}\hlstd{vyo}\hlopt{/}\hlstd{grav}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{range}\hlopt{(}\hlstd{ii}\hlopt{)=}\hlstd{vxo}\hlopt{{*}}\hlstd{max\textunderscore time}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlkwa{end}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%显示计算水平距离的列表\ }\hspace*{\fill}\\
+\hlstd{}\hlkwb{fprintf}\hlstd{}\hlopt{(}\hlstd{}\hlstr{'Range\ versus\ angle\ theta\dq{}}\hlesc{$\backslash$n}\hlstr{'}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlkwa{for\ }\hlstd{ii}\hlopt{=}\hlstd{}\hlnum{1}\hlstd{}\hlopt{:}\hlstd{}\hlnum{5}\hlstd{}\hlopt{:}\hlstd{}\hlnum{91}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{theta}\hlopt{=}\hlstd{ii}\hlopt{{-}}\hlstd{}\hlnum{1}\hlstd{}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwb{fprintf}\hlstd{}\hlopt{(}\hlstd{}\hlstr{'\%2d\ \%8.4f}\hlesc{$\backslash$n}\hlstr{'}\hlstd{}\hlopt{,}\hlstd{theta}\hlopt{,}\hlstd{range}\hlopt{(}\hlstd{ii}\hlopt{));}\hlstd{\ \ \ \ }\hlopt{}\hlstd{}\hlslc{\%}\hlstd{\ \ }\hlslc{\%4.}\Righttorque\hspace*{\fill}\\
+\hlslc{}\hlstd{\ \ \ \ \ \ \ \ \ \ \ \ }\hlslc{2f表示输出一个实数，默认宽度是4，�}\Righttorque\hspace*{\fill}\\
+\hlslc{}\hlstd{\ \ \ \ \ \ \ \ \ \ \ \ }\hlslc{��两位小数（会进入四舍五入），如��}\Righttorque\hspace*{\fill}\\
+\hlslc{}\hlstd{\ \ \ \ \ \ \ \ \ \ \ \ }\hlslc{�实际宽度超过4，则按实际宽度输出��}\Righttorque\hspace*{\fill}\\
+\hlslc{}\hlstd{\ \ \ \ \ \ \ \ \ \ \ \ }\hlslc{�}\hspace*{\fill}\\
+\hlstd{}\hlkwa{end}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%计算最大的角度和水平距离\ }\hspace*{\fill}\\
+\hlstd{}\hlopt{{[}}\hlstd{maxrange}\hlopt{,\ }\hlstd{index}\hlopt{{]}=}\hlstd{}\hlkwb{max}\hlstd{}\hlopt{(}\hlstd{range}\hlopt{);}\hspace*{\fill}\\
+\hlstd{maxangle\ }\hlopt{=\ }\hlstd{index}\hlopt{{-}}\hlstd{}\hlnum{1}\hlstd{}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlkwb{fprintf}\hlstd{}\hlopt{(}\hlstd{}\hlstr{'}\hlesc{$\backslash$n\ }\hlstr{Max\ range\ is\ \%8.4f\ at\ \%2d\ degress.}\hlesc{$\backslash$n}\hlstr{'}\hlstd{}\hlopt{,}\hlstd{maxrange}\hlopt{,}\Righttorque\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{maxangle}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlslc{\%绘制轨迹图形\ }\hspace*{\fill}\\
+\hlstd{}\hlkwa{for\ }\hlstd{ii}\hlopt{=}\hlstd{}\hlnum{5}\hlstd{}\hlopt{:}\hlstd{}\hlnum{10}\hlstd{}\hlopt{:}\hlstd{}\hlnum{80}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{theta}\hlopt{=}\hlstd{ii}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{vxo}\hlopt{=}\hlstd{vo}\hlopt{{*}}\hlstd{}\hlkwb{cos}\hlstd{}\hlopt{(}\hlstd{theta}\hlopt{{*}}\hlstd{}\hlkwb{conv}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{vyo}\hlopt{=}\hlstd{vo}\hlopt{{*}}\hlstd{}\hlkwb{sin}\hlstd{}\hlopt{(}\hlstd{theta}\hlopt{{*}}\hlstd{}\hlkwb{conv}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{max\textunderscore time}\hlopt{={-}}\hlstd{}\hlnum{2}\hlstd{}\hlopt{{*}}\hlstd{vyo}\hlopt{/}\hlstd{grav}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{\%计算小球轨迹的x,y坐标数值}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{x}\hlopt{=}\hlstd{zeros}\hlopt{(}\hlstd{}\hlnum{1}\hlstd{}\hlopt{,}\hlstd{}\hlnum{21}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{y}\hlopt{=}\hlstd{zeros}\hlopt{(}\hlstd{}\hlnum{1}\hlstd{}\hlopt{,}\hlstd{}\hlnum{21}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{for\ }\hlstd{jj}\hlopt{=}\hlstd{}\hlnum{1}\hlstd{}\hlopt{:}\hlstd{}\hlnum{21}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{time}\hlopt{=(}\hlstd{jj}\hlopt{{-}}\hlstd{}\hlnum{1}\hlstd{}\hlopt{){*}}\hlstd{max\textunderscore time}\hlopt{/}\hlstd{}\hlnum{20}\hlstd{}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{x}\hlopt{(}\hlstd{jj}\hlopt{)=}\hlstd{vxo}\hlopt{{*}}\hlstd{time}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{y}\hlopt{(}\hlstd{jj}\hlopt{)=}\hlstd{vyo}\hlopt{{*}}\hlstd{time}\hlopt{+}\hlstd{}\hlnum{0.5}\hlstd{}\hlopt{{*}}\hlstd{grav}\hlopt{{*}}\hlstd{time\textasciicircum }\hlnum{2}\hlstd{}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{end}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwb{plot}\hlstd{}\hlopt{(}\hlstd{x}\hlopt{,}\hlstd{y}\hlopt{,}\hlstd{}\hlstr{'g'}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{if\ }\hlstd{ii}\hlopt{==}\hlstd{}\hlnum{5}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlkwb{hold\ }\hlstd{on}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{end}\hspace*{\fill}\\
+\hlstd{}\hlkwa{end}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{\%添加图形的标题和坐标轴名称}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwb{title}\hlstd{}\hlopt{(}\hlstd{}\hlstr{'}\hlesc{$\backslash$b}\hlstr{f\ Trajectory\ of\ Ball\ vs\ Inital\ Angle}\hlesc{$\backslash$t}\hlstr{heta'}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwb{xlabel}\hlstd{}\hlopt{(}\hlstd{}\hlstr{'}\hlesc{$\backslash$b}\hlstr{f$\backslash$itx\ }\hlesc{$\backslash$r}\hlstr{m}\hlesc{$\backslash$b}\hlstr{f(meters)'}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwb{ylabel}\hlstd{}\hlopt{(}\hlstd{}\hlstr{'}\hlesc{$\backslash$b}\hlstr{f$\backslash$ity\ }\hlesc{$\backslash$r}\hlstr{m}\hlesc{$\backslash$b}\hlstr{f(meters)'}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwb{axis}\hlstd{}\hlopt{({[}}\hlstd{}\hlnum{0\ }\hlstd{}\hlkwb{max}\hlstd{}\hlopt{(}\hlstd{range}\hlopt{)+}\hlstd{}\hlnum{5\ 0\ }\hlstd{}\hlopt{{-}}\hlstd{vo\textasciicircum }\hlnum{2}\hlstd{}\hlopt{/}\hlstd{}\hlnum{2}\hlstd{}\hlopt{/}\hlstd{grav}\hlopt{{]});}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwb{grid\ }\hlstd{on}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{\%绘制最大水平的轨迹图形}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{vxo}\hlopt{=}\hlstd{vo}\hlopt{{*}}\hlstd{}\hlkwb{cos}\hlstd{}\hlopt{(}\hlstd{maxangle}\hlopt{{*}}\hlstd{}\hlkwb{conv}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{vyo}\hlopt{=}\hlstd{vo}\hlopt{{*}}\hlstd{}\hlkwb{sin}\hlstd{}\hlopt{(}\hlstd{maxangle}\hlopt{{*}}\hlstd{}\hlkwb{conv}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{max\textunderscore time}\hlopt{={-}}\hlstd{}\hlnum{2}\hlstd{}\hlopt{{*}}\hlstd{vyo}\hlopt{/}\hlstd{grav}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlslc{\%Calculate\ the\ (x,y)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{x}\hlopt{=}\hlstd{zeros}\hlopt{(}\hlstd{}\hlnum{1}\hlstd{}\hlopt{,}\hlstd{}\hlnum{21}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{y}\hlopt{=}\hlstd{zeros}\hlopt{(}\hlstd{}\hlnum{1}\hlstd{}\hlopt{,}\hlstd{}\hlnum{21}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlkwa{for\ }\hlstd{jj}\hlopt{=}\hlstd{}\hlnum{1}\hlstd{}\hlopt{:}\hlstd{}\hlnum{21}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ \ \ \ \ }\hlstd{time}\hlopt{=(}\hlstd{jj}\hlopt{{-}}\hlstd{}\hlnum{1}\hlstd{}\hlopt{){*}}\hlstd{max\textunderscore time}\hlopt{/}\hlstd{}\hlnum{20}\hlstd{}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ \ \ \ \ }\hlstd{x}\hlopt{(}\hlstd{jj}\hlopt{)=}\hlstd{vxo}\hlopt{{*}}\hlstd{time}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ \ \ \ \ }\hlstd{y}\hlopt{(}\hlstd{jj}\hlopt{)=}\hlstd{vyo}\hlopt{{*}}\hlstd{time}\hlopt{+}\hlstd{}\hlnum{0.5}\hlstd{}\hlopt{{*}}\hlstd{grav}\hlopt{{*}}\hlstd{time\textasciicircum }\hlnum{2}\hlstd{}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlkwa{end}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlkwb{plot}\hlstd{}\hlopt{(}\hlstd{x}\hlopt{,}\hlstd{y}\hlopt{,}\hlstd{}\hlstr{'r'}\hlstd{}\hlopt{,}\hlstd{}\hlstr{'Linewidth'}\hlstd{}\hlopt{,}\hlstd{}\hlnum{2}\hlstd{}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlkwb{hold\ }\hlstd{off}\hspace*{\fill}\\
+\mbox{}
+\normalfont
+\normalsize
+\shorthandon{"}
+\end {document}
+(* LaTeX generated by highlight 3.42, http://www.andre-simon.de/ *)
