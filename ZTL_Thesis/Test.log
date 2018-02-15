@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.12.20)  15 FEB 2018 10:43
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.12.20)  15 FEB 2018 17:26
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1711,24 +1711,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.53937> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
 )
-\openout3 = `Test.pyg'.
-
-runsystem(pygmentize -l Matlab -f latex -P commandprefix=PYG -F tokenmerge -o _
-minted-Test/FDD155D289C35FF96C9DF60016614B1EDF40AB5FFC503453F475B373C684B8FA.py
-gtex Test.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-Test/C549C69DCE1E723D12FE76191B054632E1C0B917913C1F41B6C592ED8C4ADAAC.py
+gtex code/1.py)...executed.
 
 
-(./_minted-Test/FDD155D289C35FF96C9DF60016614B1EDF40AB5FFC503453F475B373C684B8F
-A.pygtex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64723pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6])
-runsystem(del _minted-Test\8042171E7CC58D97F069E27A316BB0B6DF40AB5FFC503453F475
-B373C684B8FA.pygtex)...executed.
+(./_minted-Test/C549C69DCE1E723D12FE76191B054632E1C0B917913C1F41B6C592ED8C4ADAA
+C.pygtex)
+runsystem(del _minted-Test\C549C69DCE1E723D12FE76191B0546324E6A3AB75BD6AC090F9D
+BAFD0697B33F.pygtex)...executed.
 
 
 
@@ -1737,7 +1728,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7] (./Test.aux)
+[6] (./Test.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
@@ -1746,12 +1737,12 @@ runsystem(del Test.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 25252 strings out of 493005
- 504880 string characters out of 6137955
+ 25249 strings out of 493005
+ 504823 string characters out of 6137955
  570415 words of memory out of 5000000
- 28919 multiletter control sequences out of 15000+600000
- 8990 words of font info for 63 fonts, out of 8000000 for 9000
+ 28918 multiletter control sequences out of 15000+600000
+ 8982 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 57i,12n,70p,10432b,536s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,12n,70p,10432b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Test.pdf (7 pages).
+Output written on Test.pdf (6 pages).

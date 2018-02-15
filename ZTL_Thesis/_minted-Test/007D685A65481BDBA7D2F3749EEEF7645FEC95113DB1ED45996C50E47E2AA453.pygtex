@@ -1,0 +1,89 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{}Script file ball.m}
+\PYG{c}{\PYGZpc{}}
+\PYG{c}{\PYGZpc{}Purpose:}
+\PYG{c}{\PYGZpc{}  This program calculates the distance traveled by a ball}
+\PYG{c}{\PYGZpc{}throw at a speciified angle \PYGZdq{}theta\PYGZdq{} and a specified velocity}
+\PYG{c}{\PYGZpc{}\PYGZdq{}vo\PYGZdq{} from a point,ignoring air friction.It calculates the angle}
+\PYG{c}{\PYGZpc{}yeileding maximun range,and also plots selected trajectories.}
+\PYG{c}{\PYGZpc{}}
+\PYG{c}{\PYGZpc{}Define variable:}
+\PYG{c}{\PYGZpc{}conv       degrees to radians conv factor}
+\PYG{c}{\PYGZpc{}grav       The gravity accel}
+\PYG{c}{\PYGZpc{}ii,jj      Loop index}
+\PYG{c}{\PYGZpc{}index      The maximum range in array}
+\PYG{c}{\PYGZpc{}maxangle   The angle that gives the maximum range}
+\PYG{c}{\PYGZpc{}maxrange   Maximum range}
+\PYG{c}{\PYGZpc{}range      ranghe for a specified angle}
+\PYG{c}{\PYGZpc{}time       Time}
+\PYG{c}{\PYGZpc{}theta      Inital angle}
+\PYG{c}{\PYGZpc{}fly\PYGZus{}time   the totle trajectory time}
+\PYG{c}{\PYGZpc{}vo         The initial velocity}
+\PYG{c}{\PYGZpc{}vxo        x\PYGZhy{}component of the initial velocity}
+\PYG{c}{\PYGZpc{}vyo        y\PYGZhy{}component of the initial velocity}
+\PYG{c}{\PYGZpc{}x          x\PYGZhy{}position of ball}
+\PYG{c}{\PYGZpc{}y          y\PYGZhy{}position of ball}
+\PYG{c}{\PYGZpc{}定义常数数值}
+\PYG{n}{conv}\PYG{p}{=}\PYG{n+nb}{pi}\PYG{o}{/}\PYG{l+m+mi}{180}\PYG{p}{;}
+\PYG{n}{grav}\PYG{p}{=}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{9.82}\PYG{p}{;}
+\PYG{n}{vo}\PYG{p}{=}\PYG{n}{input}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Enter the initial velocity:\PYGZsq{}}\PYG{p}{);}
+ 
+\PYG{n}{range}\PYG{p}{=}\PYG{n+nb}{zeros}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{91}\PYG{p}{);}
+ \PYG{c}{\PYGZpc{}计算最大的水平距离}
+\PYG{k}{for} \PYG{n}{ii}\PYG{p}{=}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{91}
+    \PYG{n}{theta} \PYG{p}{=}\PYG{n}{ii}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{n}{vxo}\PYG{p}{=}\PYG{n}{vo}\PYG{o}{*}\PYG{n+nb}{cos}\PYG{p}{(}\PYG{n}{theta}\PYG{o}{*}\PYG{n}{conv}\PYG{p}{);}
+    \PYG{n}{vyo}\PYG{p}{=}\PYG{n}{vo}\PYG{o}{*}\PYG{n+nb}{sin}\PYG{p}{(}\PYG{n}{theta}\PYG{o}{*}\PYG{n}{conv}\PYG{p}{);}
+    \PYG{n}{max\PYGZus{}time}\PYG{p}{=}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{vyo}\PYG{o}{/}\PYG{n}{grav}\PYG{p}{;}
+    \PYG{n}{range}\PYG{p}{(}\PYG{n}{ii}\PYG{p}{)=}\PYG{n}{vxo}\PYG{o}{*}\PYG{n}{max\PYGZus{}time}\PYG{p}{;}
+\PYG{k}{end}
+\PYG{c}{\PYGZpc{}显示计算水平距离的列表 }
+\PYG{n}{fprintf}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Range versus angle theta\PYGZdq{}\PYGZbs{}n\PYGZsq{}}\PYG{p}{);}
+\PYG{k}{for} \PYG{n}{ii}\PYG{p}{=}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{5}\PYG{p}{:}\PYG{l+m+mi}{91}
+    \PYG{n}{theta}\PYG{p}{=}\PYG{n}{ii}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{n}{fprintf}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}\PYGZpc{}2d \PYGZpc{}8.4f\PYGZbs{}n\PYGZsq{}}\PYG{p}{,}\PYG{n}{theta}\PYG{p}{,}\PYG{n}{range}\PYG{p}{(}\PYG{n}{ii}\PYG{p}{));}    \PYG{c}{\PYGZpc{}  \PYGZpc{}4.2f表示输出一个实数，默认宽度是4，有两位小数（会进入四舍五入），如果实际宽度超过4，则按实际宽度输出。}
+\PYG{k}{end}
+\PYG{c}{\PYGZpc{}计算最大的角度和水平距离 }
+\PYG{p}{[}\PYG{n}{maxrange}\PYG{p}{,} \PYG{n}{index}\PYG{p}{]=}\PYG{n}{max}\PYG{p}{(}\PYG{n}{range}\PYG{p}{);}
+\PYG{n}{maxangle} \PYG{p}{=} \PYG{n}{index}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{n}{fprintf}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}\PYGZbs{}n Max range is \PYGZpc{}8.4f at \PYGZpc{}2d degress.\PYGZbs{}n\PYGZsq{}}\PYG{p}{,}\PYG{n}{maxrange}\PYG{p}{,}\PYG{n}{maxangle}\PYG{p}{);}
+\PYG{c}{\PYGZpc{}绘制轨迹图形 }
+\PYG{k}{for} \PYG{n}{ii}\PYG{p}{=}\PYG{l+m+mi}{5}\PYG{p}{:}\PYG{l+m+mi}{10}\PYG{p}{:}\PYG{l+m+mi}{80}
+    \PYG{n}{theta}\PYG{p}{=}\PYG{n}{ii}\PYG{p}{;}
+    \PYG{n}{vxo}\PYG{p}{=}\PYG{n}{vo}\PYG{o}{*}\PYG{n+nb}{cos}\PYG{p}{(}\PYG{n}{theta}\PYG{o}{*}\PYG{n}{conv}\PYG{p}{);}
+    \PYG{n}{vyo}\PYG{p}{=}\PYG{n}{vo}\PYG{o}{*}\PYG{n+nb}{sin}\PYG{p}{(}\PYG{n}{theta}\PYG{o}{*}\PYG{n}{conv}\PYG{p}{);}
+    \PYG{n}{max\PYGZus{}time}\PYG{p}{=}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{vyo}\PYG{o}{/}\PYG{n}{grav}\PYG{p}{;}
+    \PYG{c}{\PYGZpc{}计算小球轨迹的x,y坐标数值}
+    \PYG{n}{x}\PYG{p}{=}\PYG{n+nb}{zeros}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{21}\PYG{p}{);}
+    \PYG{n}{y}\PYG{p}{=}\PYG{n+nb}{zeros}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{21}\PYG{p}{);}
+    \PYG{k}{for} \PYG{n}{jj}\PYG{p}{=}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{21}
+        \PYG{n}{time}\PYG{p}{=(}\PYG{n}{jj}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{*}\PYG{n}{max\PYGZus{}time}\PYG{o}{/}\PYG{l+m+mi}{20}\PYG{p}{;}
+        \PYG{n}{x}\PYG{p}{(}\PYG{n}{jj}\PYG{p}{)=}\PYG{n}{vxo}\PYG{o}{*}\PYG{n}{time}\PYG{p}{;}
+        \PYG{n}{y}\PYG{p}{(}\PYG{n}{jj}\PYG{p}{)=}\PYG{n}{vyo}\PYG{o}{*}\PYG{n}{time}\PYG{o}{+}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{grav}\PYG{o}{*}\PYG{n}{time}\PYGZca{}\PYG{l+m+mi}{2}\PYG{p}{;}
+    \PYG{k}{end}
+    \PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{y}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}g\PYGZsq{}}\PYG{p}{);}
+    \PYG{k}{if} \PYG{n}{ii}\PYG{o}{==}\PYG{l+m+mi}{5}
+        \PYG{n}{hold} \PYG{n}{on}\PYG{p}{;}
+    \PYG{k}{end}
+\PYG{k}{end}
+    \PYG{c}{\PYGZpc{}添加图形的标题和坐标轴名称}
+    \PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}\PYGZbs{}bf Trajectory of Ball vs Inital Angle\PYGZbs{}theta\PYGZsq{}}\PYG{p}{);}
+    \PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}\PYGZbs{}bf\PYGZbs{}itx \PYGZbs{}rm\PYGZbs{}bf(meters)\PYGZsq{}}\PYG{p}{);}
+    \PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}\PYGZbs{}bf\PYGZbs{}ity \PYGZbs{}rm\PYGZbs{}bf(meters)\PYGZsq{}}\PYG{p}{);}
+    \PYG{n}{axis}\PYG{p}{([}\PYG{l+m+mi}{0} \PYG{n}{max}\PYG{p}{(}\PYG{n}{range}\PYG{p}{)}\PYG{o}{+}\PYG{l+m+mi}{5} \PYG{l+m+mi}{0} \PYG{o}{\PYGZhy{}}\PYG{n}{vo}\PYGZca{}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{n}{grav}\PYG{p}{]);}
+    \PYG{n}{grid} \PYG{n}{on}\PYG{p}{;}
+    \PYG{c}{\PYGZpc{}绘制最大水平的轨迹图形}
+    \PYG{n}{vxo}\PYG{p}{=}\PYG{n}{vo}\PYG{o}{*}\PYG{n+nb}{cos}\PYG{p}{(}\PYG{n}{maxangle}\PYG{o}{*}\PYG{n}{conv}\PYG{p}{);}
+    \PYG{n}{vyo}\PYG{p}{=}\PYG{n}{vo}\PYG{o}{*}\PYG{n+nb}{sin}\PYG{p}{(}\PYG{n}{maxangle}\PYG{o}{*}\PYG{n}{conv}\PYG{p}{);}
+    \PYG{n}{max\PYGZus{}time}\PYG{p}{=}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{vyo}\PYG{o}{/}\PYG{n}{grav}\PYG{p}{;}
+        \PYG{c}{\PYGZpc{}Calculate the (x,y)}
+        \PYG{n}{x}\PYG{p}{=}\PYG{n+nb}{zeros}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{21}\PYG{p}{);}
+        \PYG{n}{y}\PYG{p}{=}\PYG{n+nb}{zeros}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{21}\PYG{p}{);}
+        \PYG{k}{for} \PYG{n}{jj}\PYG{p}{=}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{21}
+            \PYG{n}{time}\PYG{p}{=(}\PYG{n}{jj}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{*}\PYG{n}{max\PYGZus{}time}\PYG{o}{/}\PYG{l+m+mi}{20}\PYG{p}{;}
+            \PYG{n}{x}\PYG{p}{(}\PYG{n}{jj}\PYG{p}{)=}\PYG{n}{vxo}\PYG{o}{*}\PYG{n}{time}\PYG{p}{;}
+            \PYG{n}{y}\PYG{p}{(}\PYG{n}{jj}\PYG{p}{)=}\PYG{n}{vyo}\PYG{o}{*}\PYG{n}{time}\PYG{o}{+}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{grav}\PYG{o}{*}\PYG{n}{time}\PYGZca{}\PYG{l+m+mi}{2}\PYG{p}{;}
+        \PYG{k}{end}
+        \PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{y}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}Linewidth\PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{);}
+        \PYG{n}{hold} \PYG{n}{off}
+\end{Verbatim}

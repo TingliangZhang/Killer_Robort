@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{sys}
+\PYG{n}{filename}\PYG{o}{=}\PYG{n}{sys}\PYG{o}{.}\PYG{n}{argv}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n}{linenum}\PYG{o}{=}\PYG{l+m+mi}{0}
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{filename}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{,}\PYG{n}{encoding}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}utf8\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+        \PYG{k}{for} \PYG{n}{line} \PYG{o+ow}{in} \PYG{n}{f}\PYG{p}{:}
+                \PYG{n}{linenum} \PYG{o}{+=}\PYG{l+m+mi}{1}
+                \PYG{k}{print}\PYG{p}{(}\PYG{n}{linenum}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}:\PYGZdq{}}\PYG{p}{,}\PYG{n}{line}\PYG{p}{)}
+\PYG{n}{f}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\PYG{n+nb}{input}\PYG{p}{()}
+\end{Verbatim}

@@ -161,48 +161,10 @@ int main() {
 }  
 \end{minted}  
 
-\begin{minted}{Matlab}
-for ii=5:10:80
-    theta=ii;
-    vxo=vo*cos(theta*conv);
-    vyo=vo*sin(theta*conv);
-    max_time=-2*vyo/grav;
-    %
-    x=zeros(1,21);
-    y=zeros(1,21);
-    for jj=1:21
-        time=(jj-1)*max_time/20;
-        x(jj)=vxo*time;
-        y(jj)=vyo*time+0.5*grav*time^2;
-    end
-    plot(x,y,'g');
-    if ii==5
-        hold on;
-    end
-end
-    %
-    title('\bf Trajectory of Ball vs Inital Angle\theta');
-    xlabel('\bf\itx \rm\bf(meters)');
-    ylabel('\bf\ity \rm\bf(meters)');
-    axis([0 max(range)+5 0 -vo^2/2/grav]);
-    grid on;
-    %
-    vxo=vo*cos(maxangle*conv);
-    vyo=vo*sin(maxangle*conv);
-    max_time=-2*vyo/grav;
-        %Calculate the (x,y)
-        x=zeros(1,21);
-        y=zeros(1,21);
-        for jj=1:21
-            time=(jj-1)*max_time/20;
-            x(jj)=vxo*time;
-            y(jj)=vyo*time+0.5*grav*time^2;
-        end
-        plot(x,y,'r','Linewidth',2);
-        hold off
+\inputminted{python}{code/1.py}
 
-\end{minted}
-
+emmm
 
 %\lstinputlisting[language=Matlab]{./code/ball.m}
 \end{document}
+
