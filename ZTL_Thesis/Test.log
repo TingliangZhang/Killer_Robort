@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.12.20)  15 FEB 2018 17:26
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2017.12.20)  15 FEB 2018 17:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1574,32 +1574,32 @@ Package: xeCJK-listings 2017/05/15 v3.4.8 xeCJK patch file for listings
 ) (./Test.aux)
 \openout1 = `Test.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 42.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 48.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 48.
 
 (c:/texlive/2017/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    ... okay on input line 48.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 42.
+LaTeX Info: Redefining \selectfont on input line 48.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1607,56 +1607,56 @@ LaTeX Info: Redefining \selectfont on input line 42.
 .................................................
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 42.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 42.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 42.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 42.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 42.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 42.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 42.
-LaTeX Font Info:    Redeclaring math accent \check on input line 42.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 42.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 42.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 42.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 42.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 48.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 48.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 48.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 48.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 48.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 48.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 48.
+LaTeX Font Info:    Redeclaring math accent \check on input line 48.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 48.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 48.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 48.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 48.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 42.
+(Font)              `operators' in the math version `normal' on input line 48.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 42.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 48.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 42.
+(Font)              `operators' in the math version `bold' on input line 48.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 42.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 48.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 42.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 42.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 42.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 42.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 42.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 48.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/bx/n on input line 42.
+(Font)                  TU/lmr/m/n --> TU/lmr/bx/n on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/bx/it on input line 42.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/bx/it on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 42.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 42.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 48.
 \c@lstlisting=\count197
  (./Test.toc
 
@@ -1711,17 +1711,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.53937> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
 )
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -o _
-minted-Test/C549C69DCE1E723D12FE76191B054632E1C0B917913C1F41B6C592ED8C4ADAAC.py
-gtex code/1.py)...executed.
-
-
 (./_minted-Test/C549C69DCE1E723D12FE76191B054632E1C0B917913C1F41B6C592ED8C4ADAA
 C.pygtex)
-runsystem(del _minted-Test\C549C69DCE1E723D12FE76191B0546324E6A3AB75BD6AC090F9D
-BAFD0697B33F.pygtex)...executed.
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -1737,8 +1728,8 @@ runsystem(del Test.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 25249 strings out of 493005
- 504823 string characters out of 6137955
+ 25248 strings out of 493005
+ 504759 string characters out of 6137955
  570415 words of memory out of 5000000
  28918 multiletter control sequences out of 15000+600000
  8982 words of font info for 62 fonts, out of 8000000 for 9000
